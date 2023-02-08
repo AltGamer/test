@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/article_cms
-    username: root
-    password: 7734
+    url: jdbc:mysql://${DB_HOST:localhost:3306}/article_cms
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD:7734}
 
   jpa:
     hibernate:
