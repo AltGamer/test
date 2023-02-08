@@ -10,7 +10,7 @@ public class HomePageController {
 
     @GetMapping
     public String getHome() {
-        return "Home Page";
+        return "It is Wednesday My Dudes https://reactor.cc/post/5462363";
     }
 
 }
