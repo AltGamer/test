@@ -6,7 +6,7 @@ $('#create-category-btn').click(function () {
     }
 
     $.ajax({
-        url: '',
+        url: './create',
         type: 'POST',
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(category),
@@ -14,9 +14,6 @@ $('#create-category-btn').click(function () {
             window.location = '/categories';
         },
         error: function (xhr) {
-            window.location = '/home';
-        },
-        complete: function () {
             window.location = '/home';
         }
     });

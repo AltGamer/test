@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
-@RequestMapping(path = "/")
+@RequestMapping(path = "/home")
 public class CommonController {
 
     @GetMapping
     public ModelAndView redirectToHome() {
-        return new ModelAndView("redirect:/home");
+        return new ModelAndView("redirect:/");
     }
 
 }

@@ -8,6 +8,9 @@ import com.article.demo.service.CategoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Component
 @RequiredArgsConstructor
 public class CategoryFacadeImpl implements CategoryFacade {
@@ -20,6 +23,12 @@ public class CategoryFacadeImpl implements CategoryFacade {
         Category category = categoryMapper.mapCategoryDTOToCategory(categoryDTO);
         categoryService.createCategory(category);
         return category;
+    }
+
+    @Override
+    public List<CategoryDTO> getCategories() {
+        List<Category> categories = categoryService.getCategories();
+        return categories.stream().map(categoryMapper::mapCategoryToDTO).collect(Collectors.toList());
     }
 
 }

@@ -13,14 +13,17 @@ import javax.validation.constraints.NotEmpty;
 @NoArgsConstructor
 public class ArticleDTO {
 
+    private Integer id;
+
     @NotEmpty
     private String title;
 
     @NotEmpty
     private String content;
 
-    public String con() {
-        return title + content;
-    }
+    private String status;
+
+    @NotEmpty
+    private CategoryDTO category;
 
 }

@@ -13,4 +13,11 @@ public class CategoryMapper {
                 .build();
     }
 
+    public CategoryDTO mapCategoryToDTO(Category category) {
+        return CategoryDTO.builder()
+                .id(category.getId())
+                .name(category.getName())
+                .build();
+    }
+
 }

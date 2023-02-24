@@ -33,6 +33,8 @@ public class WebSecurityConfig {
                 .and()
                 .httpBasic()
                 .and()
+                .csrf()
+                .disable()
                 .authenticationManager(new ProviderManager(daoAuthenticationProvider()));
         return http.build();
     }

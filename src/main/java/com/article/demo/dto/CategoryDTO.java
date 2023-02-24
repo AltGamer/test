@@ -16,4 +16,6 @@ public class CategoryDTO {
     @NotEmpty
     private String name;
 
+    private Integer id;
+
 }

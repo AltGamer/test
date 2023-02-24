@@ -6,7 +6,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
@@ -16,3 +16,5 @@ spring:
     resources:
       static-locations[0]: "file:src/main/resources/static/"
       static-locations[1]: "classpath:/static/"
+      static-locations[2]: "file:src/main/resources/templates/"
+      static-locations[3]: "classpath:/templates/"
